@@ -19,10 +19,6 @@ img {
     border: 0;
 }
 
-/* main {
-    border: 10px solid #fff;
-} */
-
 body {
     font: 17px/1.4 "orbitron";
     letter-spacing: 1px;
@@ -34,7 +30,7 @@ body {
     position: fixed;
     width: 100%;
     height: 100%;
-    perspective: 1300px;
+    /* perspective: 1300px; */
 }
 
 .wrap>video {
@@ -61,7 +57,6 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
-    display: none;
 }
 
 .wrap #circle article h1 {
@@ -116,9 +111,6 @@ body {
 }
 
 /* face1 */
-.wrap #circle .face1 {
-    display: none;
-}
 
 .wrap #circle .face1 .inner>div {
     width: 290px;
@@ -145,9 +137,6 @@ body {
 }
 
 /* face2 */
-.wrap #circle .face2 {
-    display: none;
-}
 
 .wrap #circle .face2 .inner>div {
     width: 100%;
@@ -171,9 +160,6 @@ body {
 }
 
 /* face3 */
-.wrap #circle .face3 {
-    display: none;
-}
 
 .wrap #circle .face3 .inner>div {
     width: 100%;
@@ -232,9 +218,6 @@ body {
 }
 
 /* face4 */
-.wrap #circle .face4 {
-    display: none;
-}
 
 .wrap #circle .face4 .inner>div p {
     font: 16px/1.3 "arial";
@@ -271,9 +254,6 @@ body {
 }
 
 /* face5 */
-.wrap #circle .face5 {
-    display: none;
-}
 
 .wrap #circle .face5 .inner>div {
     width: 100%;
@@ -305,9 +285,6 @@ body {
 }
 
 /* face6 */
-.wrap #circle .face6 {
-    display: none;
-}
 
 .wrap #circle .face6 .inner>div {
     width: 100%;
@@ -343,9 +320,6 @@ body {
 }
 
 /* face7 */
-.wrap #circle .face7 {
-    display: none;
-}
 
 .wrap #circle .face7 .inner>div {
     width: 100%;
@@ -394,9 +368,6 @@ body {
 }
 
 /* face8 */
-.wrap #circle .face8 {
-    display: block;
-}
 
 .wrap #circle .face8 .inner>div:nth-of-type(1) {
     width: 100%;
@@ -505,4 +476,37 @@ body {
     position: absolute;
     top: 0px;
     right: 40px;
+}
+
+/* 3D 배치 */
+.face1 {
+    transform: perspective(1300px) rotateY(0deg);
+}
+
+.face2 {
+    transform: perspective(1300px) rotateY(45deg);
+}
+
+.face3 {
+    transform: perspective(1300px) rotateY(90deg);
+}
+
+.face4 {
+    transform: perspective(1300px) rotateY(135deg);
+}
+
+.face5 {
+    transform: perspective(1300px) rotateY(180deg);
+}
+
+.face6 {
+    transform: perspective(1300px) rotateY(225deg);
+}
+
+.face7 {
+    transform: perspective(1300px) rotateY(270deg);
+}
+
+.face8 {
+    transform: perspective(1300px) rotateY(315deg);
 }
