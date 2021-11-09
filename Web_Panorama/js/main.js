@@ -1,4 +1,3 @@
-
 const circle = document.querySelector("#circle");
 const article = circle.querySelectorAll("article");
 
