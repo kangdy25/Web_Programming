@@ -2,7 +2,18 @@ const frame = document.querySelector("section");
 const lists = frame.querySelectorAll("article");
 const deg = 45;
 const len = lists.length - 1;
+const prev = document.querySelector(".btnPrev");
+const next = document.querySelector(".btnNext");
 let i = 0;
+let num = 0;
+let active = 0;
+
+function activation(index, lists){
+    for( let el of lists){
+        el.classList.remove("on");
+    }
+    lists[index].classList.add("on");
+}
 
 for (let el of lists) {
     let pic = el.querySelector(".pic")
@@ -30,3 +41,19 @@ for (let el of lists) {
         e.currentTarget.closest("article").querySelector("audio").play();
     });
 }
+
+prev.addEventListener("click", ()=>{
+    num++;
+    frame.style.transform = `rotate(${deg * num}deg)`;
+
+    (active == 0) ? active = len : active--;
+    activation(active, lists);
+});
+
+next.addEventListener("click", ()=>{
+    num--;
+    frame.style.transform = `rotate(${deg * num}deg)`;
+
+    (active == len) ? active = 0 : active++;
+    activation(active, lists);
+})
