@@ -96,7 +96,7 @@
         width: 0;
         height: 500px;
         border-left: 6px dotted white;
-        transform: skew(-30deg);
+        transform: skewY(-30deg);
     }
 }
 
