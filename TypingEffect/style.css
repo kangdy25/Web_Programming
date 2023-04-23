@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Tangerine:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Quintessential&family=Tangerine:wght@700&display=swap');
+
+@font-face {
+    font-family: 'TAEBAEKmilkyway';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 메인 배너 */
+/* main header section */
+html {
+    padding: 0;
+}
+
+#fullpage {
+    padding: 0;
+}
+
+.aboutme {
+    background: url("https://user-images.githubusercontent.com/58673491/233759406-3708e0e1-ef03-40a0-8024-65133e7a0e33.jpg");
+    background-size: cover;
+    backdrop-filter: saturate(80%);
+    width: 100%;
+    height: 100vh;
+    min-height: 400px;
+    max-height: 1080px;
+    padding: 0;
+}
+
+.opaque-bg {
+    /* position: relative; */
+    position: absolute;
+    top: calc((50vh - 205px));
+    left: calc(50% - 400px);
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    padding: 20px 20px 25px 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(204, 204, 204, 0.9);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.aboutme h3 {
+    color: white;
+    font-family: 'Quintessential', cursive;
+    font-size: 68px;
+    margin-bottom: 20px;
+}
+
+.aboutme p {
+    color: white;
+    font-family: 'Quintessential', cursive;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.aboutme i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+}
+
+.aboutme i::before {
+    content: '';
+    line-height: 0px;
+    height: 1px;
+    background-color: white;
+    margin-right: 8px;
+    width: 200px;
+}
+
+.aboutme i::after {
+    content: '';
+    line-height: 0px;
+    height: 1px;
+    background-color: white;
+    margin-left: 8px;
+    width: 200px;
+}
+
+/* mobile styles */
+@media (min-width: 100px) and (max-width: 400px) {
+    .aboutme h3 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .opaque-bg {
+        top: calc((50vh - 150px));
+        left: calc(50% - 300px);
+        height: 300px;
+        max-width: 600px;
+        padding: 20px 20px 25px 20px;
+        border-radius: 20px;
+    }
+
+    .aboutme h3 {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+
+    .aboutme p {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 640px) {
+    .aboutme {
+        min-height: 400px;
+        max-height: 720px;
+    }
+
+    .opaque-bg {
+        top: calc((50vh - 125px));
+        left: calc(50% - 200px);
+        height: 250px;
+        max-width: 400px;
+        padding: 15px 15px 20px 15px;
+        border-radius: 20px;
+    }
+
+    .aboutme h3 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .aboutme p {
+        font-size: 21px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+    .aboutme {
+        min-height: 400px;
+        max-height: 500px;
+    }
+
+    .opaque-bg {
+        top: 150px;
+        left: 0;
+        width: 100vw;
+    }
+
+    .aboutme p {
+        display: none;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.blinking-cursor {
+    font-family: serif;
+    font-weight: 500;
+    margin-left: 4px;
+    font-size: 24px;
+    color: white !important;
+    -webkit-animation: 0.75s blink step-end infinite;
+    -moz-animation: 0.75s blink step-end infinite;
+    -ms-animation: 0.75s blink step-end infinite;
+    -o-animation: 0.75s blink step-end infinite;
+    animation: 0.75s blink step-end infinite;
+}
+
+
+.typing h1 {
+    font-size: 2em;
+    color: #333;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: .15em;
+    animation: typing 3s steps(30, end) forwards;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}

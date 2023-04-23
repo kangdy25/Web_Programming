@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./style.css" rel="stylesheet">
+        <!-- 패럴랙스 스크롤링-->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script>
+        $(document).ready(function () {
+        // typing animation
+        (function ($) {
+            $.fn.writeText = function (content) {
+                var contentArray = content.split(""),
+                    current = 0,
+                    elem = this;
+                setInterval(function () {
+                    if (current < contentArray.length) {
+                        elem.text(elem.text() + contentArray[current++]);
+                    }
+                    else if (current === contentArray.length) {
+                        setTimeout(function () {
+                            elem.text("");
+                            current = 0;
+                        }, 500);
+                    }
+                }, 80);
+            };
+        })(jQuery);
+
+        // input text for typing animation
+        $("#holder").writeText("It's time to code your dream~ Are you ready?");
+        });
+        </script>
+    </head>
+    <body>
+        <div id="fullpage">
+            <div class="section aboutme" data-anchor="aboutme">
+                <div class="opaque-bg animated fadeInDown">
+                    <h3 style="color:white">Hello World!</h3>
+                    <p><span id="holder"></span><span class="blinking-cursor">|</span></p>
+                    <i>✨</i> 
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
